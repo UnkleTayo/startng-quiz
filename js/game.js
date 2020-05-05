@@ -1,3 +1,6 @@
+// Whoever will be grading this should pls be gentle on me
+// @mentor how do you guys learn JS pls I would love to know maybe my approach is the problem
+
 const quizContainer = document.querySelector('.quiz-container'),
   questionCounter = document.querySelector('.question-num-value'),
   totalQuestion = document.querySelector('.total-question'),
@@ -18,7 +21,7 @@ username = localStorage.getItem('username');
 let index = 0;
 let indexArray = [];
 let questionIndex = 0;
-let rightanswer;
+let rightanswer = 0;
 
 const questions = [
   {
@@ -29,7 +32,7 @@ const questions = [
   },
 
   {
-    question: 'Who is the creator of JavaScript programming Language?',
+    question: 'Who is the creator of JavaScript programming?',
     options: ['Brendan Eich', 'Kingabesh', 'Ryan Dahl', 'JEFF'],
     answer: 0,
   },
@@ -76,23 +79,20 @@ loadQuiz = () => {
 
 // Check for Answer
 
-answerCheck = () => {
-  rightanswer = 0;
-  options.addEventListener('click', (e) => {
-    if (e.target.id == questions[questionIndex].answer) {
-      rightanswer += 1;
-      console.log(rightanswer);
-      score.textContent = rightanswer;
-      finalScore.innerText = rightanswer;
-      e.target.classList.add('correct');
-    } else {
-      e.target.classList.add('wrong');
-    }
-    disableOption();
-    nextBtn.style.display = 'block';
-  });
+answerCheck = (e) => {
+  if (e.id == questions[questionIndex].answer) {
+    // score increament
+    rightanswer += 1;
+    console.log(rightanswer);
+    score.textContent = rightanswer;
+    finalScore.innerText = rightanswer;
+    e.classList.add('correct');
+  } else {
+    e.classList.add('wrong');
+  }
+  disableOption();
+  nextBtn.style.display = 'block';
 };
-// score increament
 
 function disableOption() {
   for (let i = 0; i < optionArr.length; i++) {
