@@ -29,7 +29,7 @@ const questions = [
   },
 
   {
-    question: 'Who is the creator of JavaScript?',
+    question: 'Who is the creator of JavaScript programming Language?',
     options: ['Brendan Eich', 'Kingabesh', 'Ryan Dahl', 'JEFF'],
     answer: 0,
   },
@@ -77,9 +77,9 @@ loadQuiz = () => {
 // Check for Answer
 
 answerCheck = () => {
+  rightanswer = 0;
   options.addEventListener('click', (e) => {
     if (e.target.id == questions[questionIndex].answer) {
-      rightanswer = 0;
       rightanswer += 1;
       console.log(rightanswer);
       score.textContent = rightanswer;

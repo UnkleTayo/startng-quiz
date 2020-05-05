@@ -415,15 +415,21 @@ p {
   padding: 1.8rem;
   color: #ffe;
   border-radius: 10px;
-  -ms-flex-preferred-size: 500px;
-      flex-basis: 500px;
-  max-width: 500px;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  max-width: 300px;
+  height: 250px;
   text-align: center;
   background-color: #00bfa6;
 }
 
 .game .game-over h1 {
   margin: 20px;
+  font-size: 1.1rem;
+}
+
+.game .game-over h1 .user {
+  color: green;
 }
 
 .game .game-over .button {

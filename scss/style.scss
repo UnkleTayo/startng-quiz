@@ -345,14 +345,20 @@ p {
       padding: 1.8rem;
       color: #ffe;
       border-radius: 10px;
-      flex-basis: 500px;
-      max-width: 500px;
+      flex-basis: 300px;
+      max-width: 300px;
+      height: 250px;
       text-align: center;
       background-color: #00bfa6;
     }
 
     h1 {
       margin: 20px;
+      font-size: 1.1rem;
+
+      .user {
+        color: green;
+      }
     }
 
     .button {
